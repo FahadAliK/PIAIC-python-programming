@@ -1,0 +1,14 @@
+def main():
+    marks_of_subjects = input_marks()
+    while True:
+        if sum(marks_of_subjects) <= 500:
+            break
+        else:
+            print("Marks of each subject must be in between 0 and 100.!!")
+            print("Please enter your marks correctly!")
+            marks_of_subjects = input_marks()
+    percentage = calculate_percentage(marks_of_subjects)
+    grade = determine_grade(percentage)
+    print("Percentage: ",percentage,"%")
+    print("Grade: ",grade)
+main()
