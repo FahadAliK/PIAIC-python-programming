@@ -1,0 +1,86 @@
+def input_marks():
+    marks_of_subjects = []
+    while True:
+        try:
+            eng_marks = float(input("Enter your marks in english subject: "))
+            break
+        except:
+            print("Please enter a number in between 0 and 100.!")
+    while True:
+        if eng_marks <= 100 and eng_marks >= 0:
+            break
+        else:
+            print("Marks must be in between 0 and 100.!")
+            try:
+                eng_marks = float(input("Enter your marks in english subject: "))
+            except:
+                pass
+    while True:
+        try:
+            sindhi_marks = float(input("Enter your marks in sindhi subject: "))
+            marks_of_subjects.append(sindhi_marks)
+            break
+        except:
+            print("Please enter a number in between 0 and 100.!")
+            try:
+                sindhi_marks = float(input("Enter your marks in sindhi subject: "))
+            except:
+                pass
+    while True:
+        if sindhi_marks <= 100 and sindhi_marks >= 0:
+            break
+        else:
+            print("Marks must be in between 0 and 100.!")
+            try:
+                eng_marks = float(input("Enter your marks in sindhi subject: "))
+            except:
+                pass
+    while True:
+        try:
+            computer_marks = float(input("Enter your marks in computer subject: "))
+            marks_of_subjects.append(computer_marks)
+            break
+        except:
+            print("Please enter a number in between 0 and 100.!")    
+    while True:
+        if computer_marks <= 100 and computer_marks >= 0:
+            break
+        else:
+            print("Marks must be in between 0 and 100.!")
+            try:
+                eng_marks = float(input("Enter your marks in computer subject: "))
+            except:
+                pass
+    while True:
+        try:
+            chemistry_marks = float(input("Enter your marks in chemistry subject: "))
+            marks_of_subjects.append(chemistry_marks)
+            break
+        except:
+            print("Please enter a number in between 0 and 100.!")
+    while True:
+        if chemistry_marks <= 100 and chemistry_marks >= 0:
+            break
+        else:
+            print("Marks must be in between 0 and 100.!")
+            try:
+                eng_marks = float(input("Enter your marks in chemistry subject: "))
+            except:
+                pass
+    while True:
+        try:
+            PST_marks = float(input("Enter your marks in Pakistan Studies subject: "))
+            marks_of_subjects.append(PST_marks)
+            break
+        except:
+            print("Please enter a number in between 0 and 100.!")
+    while True:
+        if PST_marks <= 100 and PST_marks >= 0:
+            break
+        else:
+            print("Marks must be in between 0 and 100.!")
+            try:
+                eng_marks = float(input("Enter your marks in Pakistan Studies subject: "))
+            except:
+                pass
+    return(marks_of_subjects)
