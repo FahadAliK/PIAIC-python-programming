@@ -1,0 +1,69 @@
+# Program for calculating percentage and grade.
+def main():
+  marks_of_subjects = input_marks()
+  percentage = calculate_percentage(marks_of_subjects)
+  grade = determine_grade(percentage)
+  print("Percentage: ",percentage,"%")
+  print("Grade: ",grade)
+main()
+# This function will input marks
+def input_marks():
+  marks_of_subjects = []
+  while True:
+    try:
+      eng_marks = float(input("Enter your marks in english subject: "))
+      marks_of_subjects.append(eng_marks)
+      break
+    except:
+      print("Please enter a number in between 0 and 100.!")
+  while True:
+    try:
+      sindhi_marks = float(input("Enter your marks in sindhi subject: "))
+      marks_of_subjects.append(sindhi_marks)
+      break
+    except:
+      print("Please enter a number in between 0 and 100.!")
+  while True:
+    try:
+      computer_marks = float(input("Enter your marks in computer subject: "))
+      marks_of_subjects.append(computer_marks)
+      break
+    except:
+      print("Please enter a number in between 0 and 100.!")  
+  while True:
+    try:
+      chemistry_marks = float(input("Enter your marks in chemistry subject: "))
+      marks_of_subjects.append(chemistry_marks)
+      break
+    except:
+      print("Please enter a number in between 0 and 100.!")
+  while True:
+    try:
+      PST_marks = float(input("Enter your marks in Pakistan Studies subject: "))
+      marks_of_subjects.append(PST_marks)
+      break
+    except:
+      print("Please enter a number in between 0 and 100.!")
+  return(marks_of_subjects)
+# This function will calculate percentage.
+def calculate_percentage(marks_list):
+  percentage = sum(marks_list) / 500.0
+  percentage *= 100
+  return(percentage)
+# This function will determine grade
+def determine_grade(percentage):
+  if percentage <= 100 and percentage >= 80:
+    grade = "A-One"
+  elif percentage <= 79 and percentage >= 70:
+    grade = "A"
+  elif percentage <= 69 and percentage >= 60:
+    grade = "B"
+  elif percentage <= 59 and percentage >= 50:
+    grade = "C"
+  elif percentage <= 49 and percentage >= 40:
+    grade = "D"
+  elif percentage <= 39 and percentage >= 30:
+    grade = "E"
+  else:
+    grade = "F"
+  return(grade)
