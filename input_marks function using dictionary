@@ -1,0 +1,14 @@
+def input_marks(dic):
+    for key, value in dic.items():
+        print("Enter Marks Of ",key," Subject:")
+        while True:
+            try:
+                mark = float(input())
+                if mark <= 100 and mark >= 0:
+                    break
+                else:
+                    print("Enter a number in between 0 and 100.!")
+            except:
+                print("Please.! Enter a number!")
+        dic[key] = mark
+    return(list(dic.values()))
